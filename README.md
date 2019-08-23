@@ -7,8 +7,8 @@
 但目前1.0.0版本默认最大程度上支持css，并使得css写法简洁化，适合熟悉css语法规则的人群,极大提高编码效率；
 其它编辑语言简写将在后续版本中支持，敬请关注后续更新；
 
-[中文文档](https://github.com/bolepp/easy-code-loader)
-[英文文档](https://github.com/bolepp/easy-code-loader/tree/master/docs)
+[中文文档](https://bolepp.github.io/easy-code-loader/)
+[英文文档](https://bolepp.github.io/easy-code-loader/docs)
 
 
 
@@ -201,8 +201,8 @@ console.log("test");
 ## 内置规则
  easy-code-loader内置大量简写匹配规则，从而使得编写代码能大量简化，具体规则点击下方链接查看：
 
- ```html
-<a href="https://github.com/bolepp/easy-code-loader/tree/master/tool/rules.html">点击查看内置匹配规则</a>
-```
+
+<a href="https://bolepp.github.io/easy-code-loader/tool/rules.html">点击查看内置匹配规则</a>
+
 
 

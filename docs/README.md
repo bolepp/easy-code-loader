@@ -165,7 +165,7 @@ $@reset; //Such a simple line
 # Easy-code-loader will be generated after compilation：
 
 [Thousands of lines of code are omitted here, and this is nonsense]
-Of course, specific code will be generated for this link Reset CSS：https://bolepp.github.io/easy-code-loader/css/reset.css 
+Of course, specific code will be generated for this link Reset CSS：<a href="https://bolepp.github.io/easy-code-loader/css/reset.css" target="_blank">https://bolepp.github.io/easy-code-loader/css/reset.css</a>
 
 
 # js Example:
@@ -211,13 +211,13 @@ Welcome to pay attention to the update, hope you can participate in the project 
  easy-code-loader Built-in a large number of abbreviation matching rules, so that writing code can be greatly simplified, specific rules click the link below to see：
 
 
-<a href="https://bolepp.github.io/easy-code-loader/tool/rules.html">Click to view the built-in matching rules</a>
+<a href="https://bolepp.github.io/easy-code-loader/tool/rules.html" target="_blank">Click to view the built-in matching rules</a>
 
 
 ## Online Compiler Tool
  Implement online code compilation. Note that online compilation does not support compilation for abbreviated imported files and automatic addition of PX to CSS files.：
 
-<a href="https://bolepp.github.io/easy-code-loader/tool/index.html">Open online compilation immediately</a>
+<a href="https://bolepp.github.io/easy-code-loader/tool/index.html" target="_blank">Open online compilation immediately</a>
 
 
 

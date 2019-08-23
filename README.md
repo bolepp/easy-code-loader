@@ -163,7 +163,7 @@ $@reset; //这么简单的一行
 #再次见证奇迹，easy-code-loader编译后将生成：
 
 [此处省略上千行代码，此处为废话]
-当然具体将生成此链接Reset CSS相关代码：https://bolepp.github.io/easy-code-loader/css/reset.css 
+当然具体将生成此链接Reset CSS相关代码：<a href="https://bolepp.github.io/easy-code-loader/css/reset.css" target="_blank">https://bolepp.github.io/easy-code-loader/css/reset.css</a> 
 
 
 # js示例:
@@ -203,13 +203,13 @@ console.log("test");
  easy-code-loader内置大量简写匹配规则，从而使得编写代码能大量简化，具体规则点击下方链接查看：
 
 
-<a href="https://bolepp.github.io/easy-code-loader/tool/rules.html">点击查看内置匹配规则</a>
+<a href="https://bolepp.github.io/easy-code-loader/tool/rules.html" target="_blank">点击查看内置匹配规则</a>
 
 
 ## 在线编译工具
  实现在线代码的编译，注意在线编译暂不支持针对简写导入文件的编译和css文件自动加px等单位功能：
 
-<a href="https://bolepp.github.io/easy-code-loader/tool/index.html">立即开启在线编译</a>
+<a href="https://bolepp.github.io/easy-code-loader/tool/index.html" target="_blank">立即开启在线编译</a>
 
 
 

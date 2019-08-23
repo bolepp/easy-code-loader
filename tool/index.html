@@ -1,11 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<script type="text/javascript" src="sort.js"></script>
+    <meta charset="UTF-8">
+    <title>在线转换工具</title>
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
+    <style type="text/css">
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-control:focus {
+        border-color: #66afe9;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    }
+
+    .myinput {
+        position: absolute;
+        width: 45%;
+        height: 90%;
+        top: 30px;
+        outline:none;resize:none;
+    }
+
+    .inputTxt {
+        left: 30px;
+    }
+
+    .outputTxt {
+        right: 30px;
+    }
+    .resume{
+    	position: absolute;
+    	width: 150px;
+    	padding: 20px;
+    	box-sizing: border-box;
+    	height: 70px;
+    	opacity: 0;
+    	right: 0;
+    	z-index: 99;
+    	cursor: pointer;
+    	border:1px solid #1890ff;
+    	color: #fff;
+    	text-align: center;
+    	font-weight: bold;
+    	background-color: rgba(24,144,255,0.6);
+    }
+    .resume:hover{
+		opacity:1;
+    }
+    </style>
 </head>
+
 <body>
-	
+    <textarea id="input" placeholder="粘贴您的简写代码，并转换（点击空白处即可开始编译）！" class="form-control myinput inputTxt" onblur="compile()"></textarea>
+    <textarea id="output" placeholder="转换后的结果(双击屏幕两次可开启默认示例,鼠标移至屏幕右上角可重置回原数据)" class="form-control myinput outputTxt"></textarea>
+    <div class="resume" onclick="resume()">重置回数据</div>
+    <script type="text/javascript" src="./js/options.js"></script>
+    <script type="text/javascript" src="./js/tool.js"></script>
+    <script type="text/javascript">
+    var inputDom = document.getElementById("input");
+    var outputDom = document.getElementById("output");
+    configArray = configArray.reverse();
+    var tempVal='';
+    var num=0;
+    // 编译方法
+    function compile() {
+        var inputData = inputDom.value;
+        if (inputData != '') {
+            outputDom.value = '';
+        }        
+        var outputData = handleReplace(configArray, inputData);
+        outputDom.value = outputData;
+    }
+
+    // 设置默认数据
+    function setData() {
+     var defalutData = `.box{
+    p.a;
+    d.b;
+    ]r:60px;
+    ]l:100px;
+    ]z:99;
+    ]w:600px;
+    ]h:300px;
+    ]pdt:15px;
+    ]pdr:15px;
+    ]pdb:15px;
+    ]pdl:15px;
+    ]m:20px;
+    $bse;
+    ]btc:#f00;
+    o.s;
+    ox.h;
+    ]fs:16px;
+    ]lh:24px;
+    t.c;       
+    ft.l;
+    ]c:#fff;
+    ]bg:blue;
+    ls.n;
+    wb.n;
+    ]tt:0.3s all ease; 
+    ]tf: rotateY(180deg);
+}`
+
+        inputDom.value = defalutData;
+    }
+
+
+    // 双击页面开启默认数据
+    document.ondblclick = function(e) {
+    	num++
+    	if(num>=2){
+    		num=0;
+    		tempVal=inputDom.value;
+    		 try {
+	            setData();
+	            compile();
+	        } catch (err) {
+	            console.log(err);
+	        }
+    	}       
+    }
+
+    //恢复不小心双击页面丢失的数据
+    function resume(){
+    	if(tempVal){
+    		 inputDom.value = tempVal;
+    		  compile();
+    	}
+    }
+
+    </script>
 </body>
+
 </html>

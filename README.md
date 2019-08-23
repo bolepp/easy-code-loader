@@ -9,7 +9,7 @@
 
 [中文文档](https://bolepp.github.io/easy-code-loader/)
 <br/>
-[英文文档](https://bolepp.github.io/easy-code-loader/docs)
+[English Documents](https://bolepp.github.io/easy-code-loader/docs)
 
 
 
@@ -122,7 +122,7 @@ module.exports = {
     ]tf: rotateY(180deg);
 }
 ```
-# 见证奇迹的一刻即将诞生，easy-code-loader编辑后将生成：
+# 见证奇迹的一刻即将诞生，easy-code-loader编译后将生成：
 ```css
 .box {
   position: absolute;
@@ -160,10 +160,10 @@ module.exports = {
 $@reset; //这么简单的一行
 ```
 
-#再次见证奇迹，easy-code-loader编辑后将生成：
+#再次见证奇迹，easy-code-loader编译后将生成：
 
 [此处省略上千行代码，此处为废话]
-当然具体将生成此链接Reset CSS相关代码：https://meyerweb.com/eric/tools/css/reset/  
+当然具体将生成此链接Reset CSS相关代码：https://bolepp.github.io/easy-code-loader/css/reset.css 
 
 
 # js示例:
@@ -173,7 +173,7 @@ $@log
 log("hello");
 console.log("test");
 ```
-# easy-code-loader编辑后将生成：
+# easy-code-loader编译后将生成：
 ```js
 const log= txt =>{
     console.log(txt);
@@ -204,6 +204,17 @@ console.log("test");
 
 
 <a href="https://bolepp.github.io/easy-code-loader/tool/rules.html">点击查看内置匹配规则</a>
+
+
+## 在线编译工具
+ 实现在线代码的编译，注意在线编译暂不支持针对简写导入文件的编译和css文件自动加px等单位功能：
+
+<a href="https://bolepp.github.io/easy-code-loader/tool/index.html">立即开启在线编译</a>
+
+
+
+
+<link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
 
 
 

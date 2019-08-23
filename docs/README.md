@@ -1,29 +1,30 @@
-<link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
 # easy-code-loader
 
-#### 介绍
+#### Installation
 
-使得编写代码更简单的loader，用于webpack打包使用，支持css、sass、less、js等等语言简单写法；
-理论上支持任何编程语言，可自定义编码替换规则；
-但目前1.0.0版本默认最大程度上支持css，并使得css写法简洁化，适合熟悉css语法规则的人群,极大提高编码效率；
-其它编辑语言简写将在后续版本中支持，敬请关注后续更新；
+Loader that makes writing code simpler，Used for web packages, supporting simple language writing such as css, sass, less, js, etc.；
+In theory, it supports any programming language, and can customize the code substitution rules.；
+
+However, the current version 1.0.0 supports CSS to the greatest extent by default, and makes the CSS writing concise, suitable for people familiar with the rules of CSS grammar, greatly improving the coding efficiency;
+
+Other editing language abbreviations will be supported in subsequent editions. Please pay attention to subsequent updates.；
 
 [中文文档](https://bolepp.github.io/easy-code-loader/)
 <br/>
-[英文文档](https://bolepp.github.io/easy-code-loader/docs)
+[English Documents](https://bolepp.github.io/easy-code-loader/docs)
 
 
 
-## 安装教程
+## Usage
 
 npm install easy-code-loader --save-dev
 
 
-## 配置使用
-配置webpack.config.js打包策略：
+## Configuration
+Configuring webpack packaging policy：
 
 
-## 简单用法：
+## Simple usage：
 
 ```js
 module.exports = {
@@ -38,7 +39,7 @@ module.exports = {
 };
 ```
 
-## 其他配置：
+## Other configurations：
 
 ```js
 module.exports = {
@@ -78,20 +79,20 @@ module.exports = {
 };
 ```
 
-## 配置说明
+## Configuration instructions
 
 /**
- * 替换规则配置
- * @unit 【可选】为默认单位，默认值为px 例css样式width:100px;---可省略px写成width:100[此功能目前暂仅支持css样式，sass和less可先转成css再用这功能];
- * @mark 【可选】默认值为英文]符号，此通配符尽量选跟css样式中的不冲突的符号，推荐使用$,@等  
- * @type 【可选】默认值为css,用来指定此loader处理什么类型文件
- * @cssreplace 【可选】默认值为false,注意设置为true并且type为css文件时，在样式编写中可省略配置的单位，[如font-size:16px;可省略写成font-size:16,而最终是可以写成"]fs:16"];
- * @mixins 混入机制自定义规则 [例$mra:"margin:0 auto"]
+ * Replacement rule configuration
+ * @unit [Optional] is the default unit and the default value is PX Example:css{width:100px;}---width:100[This function currently only supports CSS style, sass and less can be converted to CSS and reused];
+ * @mark [Optional] Default value is English] symbol. This wildcard tries to choose a symbol that does not conflict with the CSS style. It is recommended to use $,@etc. 
+ * @type [Optional] The default value is css, which specifies what type of file this loader handles
+ * @cssreplace [Optional] The default value is false. Note that when set to true and type is a CSS file, the configurable units can be omitted in style writing.
+ * @mixins Blending mechanism custom rules [$mra:"margin:0 auto"]
  */
 
 
 
-# css示例一:
+# css Example 1:
 
 ```js
 .box{
@@ -123,7 +124,7 @@ module.exports = {
     ]tf: rotateY(180deg);
 }
 ```
-# 见证奇迹的一刻即将诞生，easy-code-loader编辑后将生成：
+# Easy-code-loader will be generated after compilation：
 ```css
 .box {
   position: absolute;
@@ -155,26 +156,26 @@ module.exports = {
 }
 ```
 
-# css示例二:
+# css Example 2:
 
 ```js
-$@reset; //这么简单的一行
+$@reset; //Such a simple line
 ```
 
-#再次见证奇迹，easy-code-loader编辑后将生成：
+# Easy-code-loader will be generated after compilation：
 
-[此处省略上千行代码，此处为废话]
-当然具体将生成此链接Reset CSS相关代码：https://meyerweb.com/eric/tools/css/reset/  
+[Thousands of lines of code are omitted here, and this is nonsense]
+Of course, specific code will be generated for this link Reset CSS：https://bolepp.github.io/easy-code-loader/css/reset.css 
 
 
-# js示例:
+# js Example:
 
 ```js
 $@log
 log("hello");
 console.log("test");
 ```
-# easy-code-loader编辑后将生成：
+# Easy-code-loader will be generated after compilation：
 ```js
 const log= txt =>{
     console.log(txt);
@@ -183,28 +184,45 @@ log("hello");
 console.log("test");
 ```
 
-## 提示：
+## Tip：
 
- easy-code-loader 1.0.0 目前的版本内置规则基本都用于css简写，暂未内置其它编程语言简写规则；
- 欢迎关注更新，希望大家能一起参与项献代码，发挥您丰富的想像，共建良好生态；
+ easy-code-loader 1.0.0 Current versions of built-in rules are basically used for CSS abbreviation, but no other programming language abbreviation rules are built-in yet.
 
-
-## 参与贡献
-
-1. Fork 本仓库
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request  
-
-## 使用注意事项
-1.配置项cssreplace：true时，才会开启配置css单位unit省写功能
-2.配置项mark尽量设置成css中不常用会未使用的符号，否则会出现难预料的错误
-
-## 内置规则
- easy-code-loader内置大量简写匹配规则，从而使得编写代码能大量简化，具体规则点击下方链接查看：
+Welcome to pay attention to the update, hope you can participate in the project code, play your rich imagination, and build a good ecology together.；
 
 
-<a href="https://bolepp.github.io/easy-code-loader/tool/rules.html">点击查看内置匹配规则</a>
+## Participatory contribution
+
+1. Fork warehouse
+
+2. New Feat_xxx Branch
+
+3. Submit code
+
+4. New Pull Request
+
+## Use precautions
+
+1. When the configuration item cssreplace: true, the unit write-saving function of configuring CSS will be turned on.
+
+2. Configuration item mark should be set as often as possible to unused symbols in css, otherwise unexpected errors will occur
+
+## Built-in rules
+ easy-code-loader Built-in a large number of abbreviation matching rules, so that writing code can be greatly simplified, specific rules click the link below to see：
+
+
+<a href="https://bolepp.github.io/easy-code-loader/tool/rules.html">Click to view the built-in matching rules</a>
+
+
+## Online Compiler Tool
+ Implement online code compilation. Note that online compilation does not support compilation for abbreviated imported files and automatic addition of PX to CSS files.：
+
+<a href="https://bolepp.github.io/easy-code-loader/tool/index.html">Open online compilation immediately</a>
+
+
+
+
+<link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
 
 
 

@@ -70,3 +70,27 @@ function renderImport(data,url){
   });
   importBox.innerHTML=html;
 }
+
+
+var escapeArray = ['\'','"', '/', '[', ']', '-', '.', '(', ')', '$', '^', '*', '+', '?', '|', '{', '}'];
+
+// 字符串转义
+function stringEscape(str){
+    var stringArray = str.toString().split('');  
+    for (var j = 0; j < stringArray.length; j++) {
+      for (var i = 0; i < escapeArray.length; i++) {  
+        if (stringArray[j] === escapeArray[i]) {
+          stringArray[j] = '\\' + escapeArray[i];        
+        }  
+      }
+    }  
+    return stringArray.join('');
+  }
+
+// 替换处理方法
+function handleReplace(configArray,source){  
+    for (var i = 0; i < configArray.length; i++) {   
+      source = source.replace(new RegExp(stringEscape(configArray[i].pattern), 'g'), configArray[i].replace);     
+    }
+    return source;
+  }

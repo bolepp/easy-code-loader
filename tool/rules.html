@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>详细匹配规则列表</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<style type="text/css">
+		html,body{background-color: #f2f2f2;}
+		.clearfix:after {
+		    content: ".";
+		    display: block;
+		    height: 0;
+		    clear: both;
+		    visibility: hidden;
+		}
+		.rules-box{ width: 90%; margin:30px auto; font-size: 16px;}		
+		.rules-box ul li{border-bottom: 1px solid #eee; transition: 0.3 all; position: relative; background-color: #fff;}		
+		.rules-box ul li span{ width: 50%; display: inline-block; text-align: center; line-height: 40px; font-weight: bold;color: #999; }
+		.rules-box ul li:hover span{ color: #fe5e11; }
+		.rules-box ul li:nth-child(even){background:#f9f9f9;}
+		.rules-box ul li:nth-child(even) span.replace{  background-color: #f5f5f5; }
+		.rules-box ul li:hover{ cursor: pointer; background-color: #fffad1; }
+		.rules-box ul li.title .pattern-title{color: #fe5e11; background-color: #fff;}
+		.rules-box ul li.title .replace-title{color: #1890ff; background-color: #fff;}
+		.rules-box ul li:hover span.replace{ color: #1890ff; background-color: #dffbff; }
+		.rules-box ul li i{ position: absolute; line-height: 32px; left: 10px; top:4px;width: 60px;text-align: center;display: inline-block;font-weight: bold; color: #999; }
+		.rules-box ul li:hover i.num{ color: #fff; background-color: #333; }
+		.tip{ width: 100%;background-color: #fff9e4; padding: 15px 20px;margin-bottom: 20px; box-sizing: border-box; line-height: 30px; color: #666; font-size: 14px;position: relative;}
+		.tip b{ font-weight: bold;  }
+		.tip h4{ color: #fe5e11; }
+		.tip .close{ position: absolute; font-size:36px; width: 36px; height: 36px;line-height: 36px;text-align: center;right: 10px; top: 10px;cursor: pointer; }
+	</style>
+</head>
+<body>
+	<div class="rules-box">
+		<div class="tip" id="tipBox">
+			<span class="close" onclick="closeTip()">×</span>
+			<h4>温馨提示:</h4>
+			<p>
+				<span>1.匹配符一般以 通配符<b>(])+属性第一个字母+值的第一个字母</b>构成</span><br/>
+				<span>2.为避免 通配符 重复，部份命名以属性单词组的第一个字母组合，例background为]bg<br/>
+					<span>3.按<b>ctrl+f</b>调出浏览器的搜索功能，查找你要找的属性</span>
+			</p>
+		</div>
+		<ul class="clearfix" id="list">
+			
+		</ul>
+	</div>
+	<script type="text/javascript" src="./js/options.js"></script>
+	<script type="text/javascript" src="./js/tool.js"></script>
+	<script type="text/javascript">
+		function closeTip() {
+			var tipDom=document.getElementById("tipBox");
+			tipDom.remove();
+		}
+	</script>
+</body>
+</html>

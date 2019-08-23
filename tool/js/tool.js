@@ -44,7 +44,7 @@ for (var i = 0; i < mixins.length; i++) {
     temp.replace = mixins[i][temp.pattern];
     configArray.push(temp);
 }
-// 渲染页面
+// 渲染匹配规则
 function renderList(data){
   var dom=document.getElementById("list");
   var html="<li class='title'><i>序号</i><span class='pattern-title'>匹配简写符</span><span class='replace-title'>对应匹配属性值</span></li>";
@@ -56,5 +56,17 @@ function renderList(data){
   });
   dom.innerHTML=html;
 }
-console.log('configArray', configArray);
-renderList(configArray);
+
+// 渲染导入文件
+function renderImport(data,url){
+  var importBox=document.getElementById("importBox");  
+  var html="<li class='title'><i>序号</i><span class='pattern-title'>导入文件匹配简写符</span><span class='replace-title'>匹配文件内容</span></li>";
+ 
+  data.forEach(function(item,index){
+    var myurl=url+item.path;
+    html+="<li><i class='num'>"+(index+1)+"</i><span class='pattern'>"+item.pattern+"</span>"
+    html+="<span class='replace'><a href="+myurl+" target='_blank'>查看导入文件内容</a></span></li>";
+   
+  });
+  importBox.innerHTML=html;
+}

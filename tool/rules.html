@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>详细匹配规则列表</title>
-	<link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+	<link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="../css/reset.css">
 	<style type="text/css">
 		html,body{background-color: #f2f2f2;}
@@ -14,7 +14,8 @@
 		    clear: both;
 		    visibility: hidden;
 		}
-		.rules-box{ width: 90%; margin:30px auto; font-size: 16px;}		
+		.rules-box{ width: 90%; margin:30px auto; font-size: 16px;}	
+		.rules-box ul{margin-bottom: 30px;}	
 		.rules-box ul li{border-bottom: 1px solid #eee; transition: 0.3 all; position: relative; background-color: #fff;}		
 		.rules-box ul li span{ width: 50%; display: inline-block; text-align: center; line-height: 40px; font-weight: bold;color: #999; }
 		.rules-box ul li:hover span{ color: #fe5e11; }
@@ -30,6 +31,7 @@
 		.tip b{ font-weight: bold;  }
 		.tip h4{ color: #fe5e11; }
 		.tip .close{ position: absolute; font-size:36px; width: 36px; height: 36px;line-height: 36px;text-align: center;right: 10px; top: 10px;cursor: pointer; }
+		.rules-box ul li span a{ font-size: 14px;font-weight: normal;color: #1890ff;text-decoration: none; }
 	</style>
 </head>
 <body>
@@ -40,20 +42,28 @@
 			<p>
 				<span>1.匹配符一般以 通配符<b>(])+属性第一个字母+值的第一个字母</b>构成</span><br/>
 				<span>2.为避免 通配符 重复，部份命名以属性单词组的第一个字母组合，例background为]bg<br/>
-					<span>3.按<b>ctrl+f</b>调出浏览器的搜索功能，查找你要找的属性</span>
+					<span>3.按<b>ctrl+f</b>调出浏览器的搜索功能，查找你要找的属性；<b>$@符号为loader默认的导入文件匹配符</b></span>
 			</p>
 		</div>
+		<ul class="clearfix" id="importBox">
+			
+		</ul>
 		<ul class="clearfix" id="list">
 			
 		</ul>
+
+		
 	</div>
 	<script type="text/javascript" src="./js/options.js"></script>
+	<script type="text/javascript" src="./js/importSet.js"></script>
 	<script type="text/javascript" src="./js/tool.js"></script>
 	<script type="text/javascript">
 		function closeTip() {
 			var tipDom=document.getElementById("tipBox");
 			tipDom.remove();
 		}
+		renderList(configArray);
+		renderImport(importSet.config,importSet.url);
 	</script>
 </body>
 </html>

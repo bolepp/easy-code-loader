@@ -1,4 +1,3 @@
-<link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
 # easy-code-loader
 
 #### 介绍

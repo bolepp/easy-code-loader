@@ -214,7 +214,7 @@ console.log("test");
 
 ## 技术支持
 
-###QQ:262347319
+### QQ:262347319
 
 <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
 

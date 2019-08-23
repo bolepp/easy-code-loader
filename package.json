@@ -1,6 +1,6 @@
 {
   "name": "easy-code-loader",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Make it easier to write code loader, support css, sass, less, JS and other simple language writing",
   "main": "index.js",
   "scripts": {

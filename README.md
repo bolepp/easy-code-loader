@@ -1,3 +1,4 @@
+<link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
 # easy-code-loader
 
 #### 介绍
@@ -8,6 +9,7 @@
 其它编辑语言简写将在后续版本中支持，敬请关注后续更新；
 
 [中文文档](https://bolepp.github.io/easy-code-loader/)
+<br/>
 [英文文档](https://bolepp.github.io/easy-code-loader/docs)
 
 

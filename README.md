@@ -212,7 +212,9 @@ console.log("test");
 <a href="https://bolepp.github.io/easy-code-loader/tool/index.html" target="_blank">立即开启在线编译</a>
 
 
+## 技术支持
 
+###QQ:262347319
 
 <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
 
